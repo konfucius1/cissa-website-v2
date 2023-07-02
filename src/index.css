@@ -113,6 +113,7 @@ nav {
 .nav__list {
     list-style-type: none;
     display: flex;
+    flex-direction: row;
     margin-left: auto;
     gap: 1.8rem;
 }
@@ -149,4 +150,8 @@ nav {
 .nav__link:hover::after {
   transform: scaleX(1);
   transform-origin: bottom left;
+}
+
+.burger {
+
 }
