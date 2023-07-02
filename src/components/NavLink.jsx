@@ -2,7 +2,7 @@ import PropTypes from 'prop-types'
 
 function NavLink ({ text, link, isBold, isDropDown }) {
   return (
-    <a className={`${isBold && 'nav__link--bold'} nav__link`} href={link}>{text} {isDropDown && 'V'}</a>
+    <a className={`${isBold && 'nav__link--bold'} nav__link`} href={link}>{text} {isDropDown && '⏷'}</a>
   )
 }
 
