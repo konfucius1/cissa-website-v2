@@ -1,6 +1,6 @@
 import NavLink from './NavLink'
 
-function NavList () {
+function NavList ({ isOpen }) {
   const navLinkItems = [
     { id: 1, text: 'Events', link: '#', isDropDown: true },
     { id: 2, text: 'Committee', link: '#' },
@@ -12,7 +12,7 @@ function NavList () {
   ]
 
   return (
-    <ul className='nav__list'>
+    <ul className={`nav__list ${isOpen ? 'flex flex--col' : 'none'}`}>
       {navLinkItems.map((item) => {
         return (
           <li key={item.id}>

@@ -1,20 +1,14 @@
 import '../../public/hamburger.svg'
 import '../../public/cross.svg'
-import { useState } from 'react'
-import NavList from './NavList'
+import { FaBars, FaTimes } from 'react-icons/fa'
 
-function Hamburger () {
-  const [isOpen, toggleOpen] = useState(false)
-
-  const handleToggle = () => {
-    toggleOpen(!isOpen)
-  }
-
+function Hamburger ({ isOpen, clickHandler }) {
   return (
     <>
-      <NavList />
-      <div className='burger'>
-        <img width='50' height='50' onClick={handleToggle} src={isOpen ? 'cross.svg' : 'hamburger.svg'} />
+      <div className='burger' onClick={clickHandler}>
+        {isOpen
+          ? <FaTimes size={35} color='grey' />
+          : <FaBars size={35} color='white' />}
       </div>
     </>
   )
