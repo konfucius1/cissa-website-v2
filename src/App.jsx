@@ -4,7 +4,7 @@ import './index.css'
 function App () {
   return (
     <>
-      <Header />
+      <Header mobileBreakpoint={1000} />
       <div className='container'>
         <div className='content'>
           <h1>My App</h1>
