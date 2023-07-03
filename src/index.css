@@ -118,15 +118,16 @@ nav {
     width: 100%;
 }
 
+
 .nav__content {
   display: flex;
 }
 
 .nav__list {
-    list-style-type: none;
-    margin-left: auto;
-    gap: 1rem;
-    align-self: center;
+  list-style-type: none;
+  margin-left: auto;
+  gap: 1rem;
+  align-self: center;
 }
 
 .nav__list--open {
@@ -172,4 +173,58 @@ nav {
 .burger {
   margin-left: auto;
   align-self: center;
+}
+
+footer {
+  background-color: var(--bgcolor-primary-700);
+  color: var(--text-color-dark);
+  position: static;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding-block: 5rem;
+}
+
+.footer__content {
+  width: 40%;
+  margin: 0 auto;
+
+  display: flex;
+  flex-flow: column;
+  gap: 2rem;
+}
+
+.icons {
+  display: flex;
+}
+
+.icon {
+  --b: 0.1em;   /* the thickness of the line */
+  --c: #1095c1; /* the color */
+
+  width: auto;
+  margin-left: auto;
+
+  color: #0000;
+  padding-block: var(--b);
+  background: 
+    linear-gradient(var(--c) 50%,#000 0) 0% calc(100% - var(--_p,0%))/100% 200%,
+    linear-gradient(var(--c) 0 0) 0% var(--_p,0%)/var(--_p,0%) var(--b) no-repeat;
+  -webkit-background-clip: text,padding-box;
+          background-clip: text,padding-box;
+          transition: .3s var(--_s,0s) linear,background-size .3s calc(.3s - var(--_s,0s));
+}
+
+.icon:first-of-type{
+  margin-left: 0;
+}
+
+.icon:hover {
+  cursor: pointer;
+  --_p: 100%;
+  --_s: .3s;
+}
+
+.copyright {
+  margin: 0 auto;
 }
